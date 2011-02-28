@@ -12,7 +12,8 @@ Usage:
   NSString *transloaditKey = @"KEY";
   NSString *transloaditSecret = @"SECRET";
 
-  TransloaditRequest *request = [[TransloaditRequest alloc]initWithCredentials:transloaditKey secret:transloaditSecret];
+  TransloaditRequest *request = [[TransloaditRequest alloc]initWithCredentials:transloaditKey 
+                                                                        secret:transloaditSecret];
   [request setDelegate:self];
 
   // Params
