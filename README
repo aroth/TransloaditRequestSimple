@@ -12,7 +12,7 @@ Usage:
 
   ...
 
-  NSString *notifyURL = @"http://...";
+  NSString *notifyURL = @"http://NOTIFY-URL";
   NSString *templateID = @"TEMPLATE-ID";
   NSString *transloaditKey = @"KEY";
   NSString *transloaditSecret = @"SECRET";
