@@ -1,5 +1,10 @@
-Simplified version of the class first introduced here:
+Simplified version of the Transloadit Request class introduced here:
 https://github.com/transloadit/iphone-sdk
+
+What's different:
+
+- Removed addPickedFile, saveImageToDisk, addImageFromDisk methods
+- Removed startAsynchronous method, replaced with signRequest method
 
 Usage:
 
@@ -23,3 +28,8 @@ Usage:
   [request.params setObject:templateID forKey:@"template_id"];
 
   [request signRequest];
+  // Add request to a queue, or start [a]synchronously:
+  // [networkQueue addOperation:request]
+  // -or-
+  // [request startAsynchronous]
+  
