@@ -1,3 +1,24 @@
 Simplified version of the class first introduced here:
 https://github.com/transloadit/iphone-sdk
 
+Usage:
+
+  #import "TransloaditRequest.h"
+
+  ...
+
+  NSString *notifyURL = @"http://...";
+  NSString *templateID = @"TEMPLATE-ID";
+  NSString *transloaditKey = @"KEY";
+  NSString *transloaditSecret = @"SECRET";
+
+  TransloaditRequest *request = [[TransloaditRequest alloc]initWithCredentials:transloaditKey secret:transloaditSecret];
+  [request setDelegate:self];
+
+  // Params
+  [request setFile:asset.filePath withFileName:asset.filename andContentType:asset.contentType forKey:@"media"];
+  [request addPostValue:asset.date forKey: @"media_timestamp"];
+  [request.params setObject:notifyURL forKey:@"notify_url"];
+  [request.params setObject:templateID forKey:@"template_id"];
+
+  [request signRequest];
