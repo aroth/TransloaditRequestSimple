@@ -1,6 +1,6 @@
 //
 //  TransloaditRequest.m
-//
+// aroth
 #import <CommonCrypto/CommonHMAC.h>
 #import "TransloaditRequest.h"
 #import "JSON.h"
@@ -24,7 +24,8 @@
 	[auth release];
     
 	return self;
-}
+}	
+
 
 #pragma mark Subclassed Methods
 
